@@ -59,11 +59,19 @@ const Home = ({navigation, route}) => {
         ) : (
           <Text style={styles.noCarsText}>Nenhum carro encontrado.</Text>
         )}
+        <View style={styles.footer}>
         <FAB
           onPress={() => navigation.navigate('Map')}
           style={styles.fab1}
           small={false}
           icon="map"
+          theme={{ colors: { accent: '#006aff' } }}
+        />
+        <FAB
+          onPress={() => navigation.navigate('Music')}
+          style={styles.fab2}
+          small={false}
+          icon="music"
           theme={{ colors: { accent: '#006aff' } }}
         />
          <FAB
@@ -73,6 +81,7 @@ const Home = ({navigation, route}) => {
           icon="plus"
           theme={{ colors: { accent: '#006aff' } }}
         /> 
+        </View>
       </View>
       </LinearGradient>
     </View>
@@ -128,7 +137,16 @@ const styles = StyleSheet.create({
     position: 'absolute',
     margin: 16,
     left: 0,
-    bottom: 0,
+    bottom: 0,},
+
+    fab2: {
+      position: 'absolute',
+      margin: 16,
+      bottom: 0,
+  },
+  footer:{
+    alignItems:'center',
+    justifyContent:'center',
   },
 });
 

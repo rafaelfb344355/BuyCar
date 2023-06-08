@@ -5,6 +5,7 @@ import Home from './screens/Home';
 import CreateCar from './screens/CreateCar';
 import Cars from './screens/Cars';
 import Map from './screens/Map';
+import Spotify from './screens/Spotify';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createStore } from 'redux';
@@ -42,6 +43,11 @@ function App() {
           name="Map"
           component={Map}
           options={{ ...myOptions, title: 'Filias Proximas' }}
+        />
+        <Stack.Screen
+          name="Music"
+          component={Spotify}
+          options={{ ...myOptions, title: 'Solta O Som' }}
         />
       </Stack.Navigator>
     </View>
